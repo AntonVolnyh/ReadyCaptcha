@@ -1,7 +1,16 @@
 
-# ReadyCaptcha (reCAPTCHA V2)
+# ReadyCaptcha (reCAPTCHA V2/v3)
 
-ReadyCaptcha is a Python-based application designed to manage and distribute Google reCAPTCHA tokens efficiently. It ensures you have a valid token on hand for situations where every second counts, such as registering a visit time or booking appointments.
+ReadyCaptcha is a Python-based application designed to manage and distribute Google reCAPTCHA tokens efficiently. 
+
+This program functions like a bank for Google reCaptcha v2/v3 tokens. It solves it using the selected service tokens in advance, stores them, keeps them alive, and dispenses them to you as soon as they are needed.
+It ensures you have a valid token on hand for situations where every second counts, such as registering a visit time or booking appointments.
+
+Supported captcha solving services:
+- cap.guru _(recommended)_
+- 2captcha.com (aka rucaptcha.com)
+- azcaptcha.com
+- Anti-Captcha.com
 
 ## Features
 
@@ -41,7 +50,8 @@ pip install aiohttp asyncio datetime configparser threading curses
 
     Replace `YOUR_API_KEY` and `YOUR_GOOGLE_SITE_KEY` with your actual API keys.
 
-I recommend using cap.guru <https://cap.guru/en/regen/?ref=148154> as it currently offers the most cost-effective captcha solving service. However, you can easily use other services like **2captcha.com** or **azcaptcha** as well. All of these have a similar API structure, and you simply need to specify their in.php and res.php in the config.ini file.
+I recommend using cap.guru <https://cap.guru/en/regen/?ref=148154> as it currently offers the most cost-effective captcha solving service. However, you can easily use other services like `2captcha.com`, `azcaptcha.com` or `Anti-Captcha.com
+` as well. All of these have a similar API structure, and you simply need to specify their in.php and res.php in the config.ini file.
 
 ## Usage
 
