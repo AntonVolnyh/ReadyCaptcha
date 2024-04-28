@@ -87,8 +87,8 @@ while True:
         reCaptchaV2 = token
         break
     else:
-        # Wait for 5 minutes before retrying
-        time.sleep(300)
+        # Wait for 3 seconds before retrying
+        time.sleep(3)
 ```
 
 ### JavaScript Example
@@ -105,8 +105,8 @@ function getToken() {
                 console.log("Token received: " + token);
                 // Use the token as needed
             } else {
-                console.log("No tokens available, retrying in 5 minutes...");
-                setTimeout(getToken, 300000); // Retry after 5 minutes
+                console.log("No tokens available, retrying in 3 seconds...");
+                setTimeout(getToken, 3000); // Retry after 3 seconds
             }
         })
         .catch(error => console.error('Error fetching token:', error));
