@@ -185,7 +185,7 @@ def update_ui(stdscr):
             stdscr.clear()
             stdscr.addstr(0, 0, "================= ReadyCaptcha ================\n")
             stdscr.addstr(f"===== RETRIEVAL, STORAGE, AND DISTRIBUTION ====\n")
-            stdscr.addstr(f"============== Google reCAPTCHA V2 ============\n")
+            stdscr.addstr(f"============= Google reCAPTCHA V2/v3 ==========\n")
             stdscr.addstr(f"============= PROGRAM VERSION 1.3 =============\n")
             stdscr.addstr(f"============ AUTHOR: ANTON VOLNYKH ============\n\n")
 
@@ -205,9 +205,9 @@ def update_ui(stdscr):
             stdscr.addstr(f"Expired tokens: {message['dead_tokens_count']}\n")
             stdscr.addstr(f"The last request for a token: {last_request_str}\n\n")
             
-            cost_per_token = 0.03  # The cost of one token in USD
+            cost_per_token = 0.00055 # The cost of one token in USD
             total_cost = message['request_count'] * cost_per_token  # The total cost of tokens
-            stdscr.addstr(f"Total tokens requested: {message['request_count']} ({total_cost:.2f} USD)\n")
+            stdscr.addstr(f"Total tokens requested: {message['request_count']} (${total_cost:.2f})\n")
             stdscr.addstr(f"Active requests: {active_requests}\n")
 
             stdscr.addstr(f"Errors when requesting a token: {message['error_count']}\n\n\n")
